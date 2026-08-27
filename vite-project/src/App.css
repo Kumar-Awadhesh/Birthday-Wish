@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 320px;
+    height: 100vh;
+    margin: auto;
+    border: 1px solid;
+    background: url("/images/dashboard_theme.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.waiting-container{
+    /* display: none; */
+    width: 320px;
+    height: 100vh;
+    margin: auto;
+    align-content: center;
+
+    background: url("/images/waiting-theme-img.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.time-stamp{
+    color: lightyellow;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.waiting-msg{
+    color: lightpink;
+    text-align: center;
+    margin-top: -150px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.birth-cake-container{
+    width: 320px;
+    height: 100vh;
+    margin: auto;
+    
+}
+
+.cake-img-container-before{
+    height: 100vh;
+    align-content: end;
+    text-align: center;
+    background: url("/images/dashboard_theme.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cake-img-container-before>img{
+    width: 200px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.cake-img-container-after{
+    display: none;
+}
+
+.celebrate-msg-container{
+    margin-bottom: 100px;
+    padding: 5px;
+    color: palevioletred;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: oblique;
+    line-height: 1.5;
+}
+
+.candle-btn-container>button{
+    border: none;
+    outline: none;
+    padding: 10px 20px 10px 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    font-style: oblique;
+    background-color: palevioletred;
+    color: pink;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-style: outset;
+    border-color: pink;
+}
+
+.candle-btn-container>button:hover{
+    cursor:pointer;
+    border-style: inset;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+.celebration-container-after{
+    height: 100vh;
+    align-content: center;
+    background: url("/images/celebration-theme.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.celebration-container-after>img{
+    width: 320px;
+    height: 600px;
+}
+
+.celebration-container-before{
+    display: none;
+}
