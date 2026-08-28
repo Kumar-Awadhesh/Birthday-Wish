@@ -13,7 +13,7 @@ const BirthCake = () => {
                 </div>
                 <div className={celebration ? "cake-img-container-after" : "cake-img-container-before"}>
                     <h3 className="celebrate-msg-container">
-                        Hey Beautifull! <br />
+                        Hey Beautifull!! <br />
                         It is time to your Precious Moment!! <br />
                         My Precious Lady! Lets Celebrate your Birthday!!!
                     </h3>
