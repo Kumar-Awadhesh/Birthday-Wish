@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const BirthdayContext = createContext();
 
 export const BirthContextProvider = ({children}) => {
-    const [user, setUser] = useState(false);
+    const [user, setUser] = useState("Elaichi");
 
 
     return(

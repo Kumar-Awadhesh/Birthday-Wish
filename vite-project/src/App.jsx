@@ -3,6 +3,7 @@ import Dashboard from './components/dashboard';
 import WaitingRoom from './components/waitingRoom';
 import BirthCake from './components/birthCake';
 import BirthdayWish from './components/birthdayWish';
+import Menu from './components/menu';
 import './App.css'
 
 
@@ -18,7 +19,7 @@ function App() {
         <Route path='/birth_cake' element={<BirthCake/>} />
         <Route path='wish_msg' element={<BirthdayWish/>} />
       </Routes>
-
+      <Menu/>
     </>
   )
 }

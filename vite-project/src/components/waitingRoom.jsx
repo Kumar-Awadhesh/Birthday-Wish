@@ -45,7 +45,7 @@ const WaitingRoom = () => {
         <>
             <main className="container">
                 <div className="waiting-container">
-                    <h2 className="waiting-msg">Waiting for the Day,
+                    <h2 className="waiting-msg"> Hey Beautiful! <br /> Waiting for the Day,
                         The Day You Came into This World!
                     </h2>
                     <h2 className="time-stamp">
