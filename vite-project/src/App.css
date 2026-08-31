@@ -136,7 +136,7 @@
 }
 
 .menu-icons{
-    width: 320px;
+    width: 321px;
     margin: auto;
     display: flex;
     align-content: center;
@@ -146,7 +146,7 @@
 
 .menu-icons>img{
     width: 20px;
-    padding: 2px;
+    padding: 3px;
 }
 
 .menu-icons>img:hover{
@@ -187,4 +187,13 @@
 
 .user-input-container>input::placeholder{
     color: rgb(249, 132, 152);;
+}
+
+.user-input-container>button:hover{
+    cursor: pointer;
+    background-color: pink;
+}
+
+.user-input-container>input:hover{
+    background-color: pink;
 }
