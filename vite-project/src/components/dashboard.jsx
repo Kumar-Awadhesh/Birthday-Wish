@@ -12,8 +12,8 @@ const Dashboard = () => {
         if(userName !== ""){
             if(user.toLocaleLowerCase() === userName.toLocaleLowerCase()){
                 alert(
-                    "It's you my Elaichi!!",
-                    "Let me take you to your Surprise!"
+                    "It is you! my Elaichi!!",
+                    "Now.. let me take you to your Surprise!"
                 );
                 navigate("/waiting")
             }
