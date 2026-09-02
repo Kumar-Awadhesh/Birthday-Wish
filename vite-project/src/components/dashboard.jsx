@@ -47,10 +47,10 @@ const Dashboard = () => {
 
     return (
         <>
-            <main className="container">
+            <main className="container smooth-navigation">
                 {
                     searchField &&
-                    <div className="confirmation-msg-container">
+                    <div className="confirmation-msg-container smooth-navigation">
                         <h2>
                             Hey Beautifull! <br />
                             If it's you, why don't you Enter your special name down below!
@@ -60,7 +60,7 @@ const Dashboard = () => {
                 }
                 {
                     searchField ?
-                        <div className="user-input-container">
+                        <div className="user-input-container smooth-navigation">
                             <input type="password" placeholder="Enter your name, precious one!" onChange={(e) => setUserName(e.target.value)} />
                             <button onClick={userAuthentication}>It's Me</button>
                         </div> :

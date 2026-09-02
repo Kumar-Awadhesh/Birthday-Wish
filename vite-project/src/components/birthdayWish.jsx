@@ -7,7 +7,7 @@ const BirthdayWish = () => {
 
     return(
         <>
-            <main className="birthday-wish-msg-container">
+            <main className="birthday-wish-msg-container smooth-navigation">
                 <div className="wish-msg-container">
                     <img src="/images/wish-msg.png" alt="" />
                 </div>

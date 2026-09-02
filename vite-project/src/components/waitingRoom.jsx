@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { BirthdayContext } from "../authorization/birthdayContext";
 
 
@@ -8,10 +9,11 @@ const WaitingRoom = () => {
     const [minute, setMinute] = useState(0);
     const [second, setSecond] = useState(0);
 
-    const targetDate = new Date("2026-09-05T00:00:00").getTime();
+    const targetDate = new Date("2026-09-03T02:38:00").getTime();
     const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
     const {user, setUser} = useContext(BirthdayContext);
+    const navigate = useNavigate();
 
     
 
@@ -39,11 +41,18 @@ const WaitingRoom = () => {
         setHour(Math.floor(totalSecond % (60 * 60 * 24) / (60 * 60)));
         setMinute(Math.floor(totalSecond % (60 * 60) / 60));
         setSecond(Math.floor(totalSecond % 60));
+    
     }, [timeLeft])
+
+    useEffect(() => {
+        if(timeLeft === 0){
+            navigate("/birth_cake")
+        }
+    },[timeLeft])
 
     return (
         <>
-            <main className="container">
+            <main className="container smooth-navigation">
                 <div className="waiting-container">
                     <h2 className="waiting-msg"> Hey Beautiful! <br /> Waiting for the Day,
                         The Day You Came into This World!

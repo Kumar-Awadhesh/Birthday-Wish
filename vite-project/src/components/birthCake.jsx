@@ -1,14 +1,25 @@
 import { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 const BirthCake = () => {
     const [celebration, setCelebration] = useState(false);
+    const navigate = useNavigate();
+
+
+    const celebrationHandle = () => {
+        setCelebration(true);
+        setTimeout(() => {
+            navigate("/wish_msg")
+        },10000)
+        
+    }
 
 
     return(
         <>
-            <main className="birth-cake-container">
-                <div className={celebration ? "celebration-container-after" : "celebration-container-before"} >
+            <main className="birth-cake-container smooth-navigation">
+                <div className={celebration ? "celebration-container-after smooth-navigation" : "celebration-container-before"} >
                     <img src="/images/celebration-img.gif" alt="" />
                 </div>
                 <div className={celebration ? "cake-img-container-after" : "cake-img-container-before"}>
@@ -19,7 +30,7 @@ const BirthCake = () => {
                     </h3>
                     
                     <img src="/images/lighting-cake.gif" alt="" />
-                    <div className="candle-btn-container"><button onClick={()=> setCelebration(true)}>Blow the Candle</button></div>
+                    <div className="candle-btn-container"><button onClick={celebrationHandle}>Blow the Candle</button></div>
                 </div>
             </main>
         </>
