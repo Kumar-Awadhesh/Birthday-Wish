@@ -6,10 +6,12 @@ const Dashboard = () => {
     const [userName, setUserName] = useState("");
     const [searchField, setSearchField] = useState(false);
     const { user, setUser } = useContext(BirthdayContext);
+     const [sideBar, setSideBar] = useState(false);
     const navigate = useNavigate();
 
     let count = 0;
     const userAuthentication = () => {
+        localStorage.setItem("User", userName);
         if (userName !== "") {
             if (user.toLocaleLowerCase() === userName.toLocaleLowerCase()) {
                 alert(
@@ -48,6 +50,21 @@ const Dashboard = () => {
     return (
         <>
             <main className="container smooth-navigation">
+                <nav className="navbar smooth-navigation">
+                    <img onClick={(()=>{
+                        sideBar ? setSideBar(false) : setSideBar(true)
+                    })} src="/images/user.png" alt="" />
+                </nav>
+                {
+                    sideBar &&
+                    <div className="sidebar smooth-navigation">
+
+                        <div className="sidebar-options">
+                            <h4>Open When...</h4>
+                            <h4>My Collection</h4>
+                        </div>
+                    </div>
+                }
                 {
                     searchField &&
                     <div className="confirmation-msg-container smooth-navigation">
@@ -61,7 +78,7 @@ const Dashboard = () => {
                 {
                     searchField ?
                         <div className="user-input-container smooth-navigation">
-                            <input type="password" placeholder="Enter your name, precious one!" onChange={(e) => setUserName(e.target.value)} />
+                            <input type="password" placeholder="Enter your name, precious one!" onChange={(e) => setUserName(e.target.value)} /> <br />
                             <button onClick={userAuthentication}>It's Me</button>
                         </div> :
                         <div className="user-verification-msg-container">
