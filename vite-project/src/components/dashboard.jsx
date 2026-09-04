@@ -59,7 +59,7 @@ const Dashboard = () => {
     
     console.log(birthTime)
     useEffect(() => {
-        if(birthTime === 0){
+        if(login && birthTime === 0){
             navigate("/wish_msg");
         }
     },[birthTime])
