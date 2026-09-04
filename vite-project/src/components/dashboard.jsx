@@ -57,12 +57,12 @@ const Dashboard = () => {
         return;
     }
     
-    console.log(birthTime)
-    useEffect(() => {
-        if(login && birthTime === 0){
-            navigate("/birth_cake");
-        }
-    },[birthTime])
+    // console.log(birthTime)
+    // useEffect(() => {
+    //     if(login && birthTime === 0){
+    //         navigate("/birth_cake");
+    //     }
+    // },[birthTime])
 
 
     return (
@@ -82,6 +82,9 @@ const Dashboard = () => {
                                 <h3></h3>
                                 <div className="sidebar-options">
                                     <h2 className="user-name">{User}</h2>
+                                    <h4 onClick={(e)=> navigate("/waiting")}>Waiting Room</h4>
+                                    <h4 onClick={(e)=> navigate("/birth_cake")}>Birthday Cake</h4>
+                                    <h4 onClick={(e)=> navigate("/wish_msg")}>Wishes</h4>
                                     <h4>Open When...</h4>
                                     <h4>My Collection</h4>
                                 </div>

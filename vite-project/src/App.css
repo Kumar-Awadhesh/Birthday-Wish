@@ -72,7 +72,15 @@
 
 .sidebar-options{
     font-style: italic;
-    
+}
+
+.sidebar-options>h4{
+    margin-top: 20px;
+}
+
+.sidebar-options>h4:hover{
+    cursor: pointer;
+    font-size: larger;
 }
 
 .sidebar-options>h4:first-child{
