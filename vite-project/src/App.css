@@ -31,6 +31,19 @@
     color: rgb(235, 137, 137);
 }
 
+.reset-btn{
+  text-align: right;
+  color: pink;
+  padding-right: 5px;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.reset-btn:hover{
+    cursor: pointer;
+
+}
+
 .navbar>img{
     width: 20px;
     border-radius: 10px;
@@ -40,6 +53,12 @@
 .navbar>img:hover{
     cursor: pointer;
     background-color: red;
+}
+
+.user-name{
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
 }
 
 .sidebar{
@@ -75,6 +94,14 @@
     }
 }
 
+.welcome-msg{
+    margin: auto;
+    text-align: center;
+    color: pink;
+    font-style: italic;
+    margin-top: 100px;
+}
+
 .waiting-container{
     
     width: 320px;
@@ -97,7 +124,7 @@
 .waiting-msg{
     color: lightpink;
     text-align: center;
-    margin-top: -150px;
+    margin-top: -145px;
     margin-bottom: 20px;
     font-size: 22px;
     font-family: unset;

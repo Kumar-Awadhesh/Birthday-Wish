@@ -9,10 +9,10 @@ const WaitingRoom = () => {
     const [minute, setMinute] = useState(0);
     const [second, setSecond] = useState(0);
 
-    const targetDate = new Date("2026-09-03T02:38:00").getTime();
+    const targetDate = new Date("2026-09-05T00:00:00").getTime();
     const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
-    const {user, setUser} = useContext(BirthdayContext);
+    const {user, setUser, birthTime, setBirthTime} = useContext(BirthdayContext);
     const navigate = useNavigate();
 
     
@@ -36,6 +36,7 @@ const WaitingRoom = () => {
 
     useEffect(() => {
         const totalSecond = Math.floor(timeLeft / 1000);
+        setBirthTime(timeLeft);
 
         setDay(Math.floor(totalSecond / (60 * 60 * 24)));
         setHour(Math.floor(totalSecond % (60 * 60 * 24) / (60 * 60)));

@@ -1,10 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { BirthdayContext } from "../authorization/birthdayContext";
 
 
 const BirthCake = () => {
     const [celebration, setCelebration] = useState(false);
     const navigate = useNavigate();
+    const {login, setLogin, birthTime, setBirthTime} = useContext(BirthdayContext);
 
 
     const celebrationHandle = () => {
@@ -14,6 +16,13 @@ const BirthCake = () => {
         },10000)
         
     }
+    
+
+    useEffect(() => {
+        if(birthTime === 0){
+            navigate("/wish_msg");
+        }
+    },[birthTime])
 
 
     return(
