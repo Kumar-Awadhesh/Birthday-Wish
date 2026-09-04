@@ -7,11 +7,11 @@ const Dashboard = () => {
     const [searchField, setSearchField] = useState(false);
     const [sideBar, setSideBar] = useState(false);
     const navigate = useNavigate();
-    const { user, setUser, login, setLogin } = useContext(BirthdayContext);
+    const { user, setUser, login, setLogin, birthTime, setBirthTime } = useContext(BirthdayContext);
 
 
     const User = localStorage.getItem("User");
-    
+    console.log(birthTime)
 
     useEffect(() => {
         if (User?.toLocaleLowerCase() === user.toLocaleLowerCase()) {
@@ -56,6 +56,13 @@ const Dashboard = () => {
         alert("Ohh, if you're not the one then, it's not for you!");
         return;
     }
+    
+    console.log(birthTime)
+    useEffect(() => {
+        if(birthTime === 0){
+            navigate("/wish_msg");
+        }
+    },[birthTime])
 
 
     return (
