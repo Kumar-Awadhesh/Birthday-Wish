@@ -18,12 +18,6 @@ const BirthCake = () => {
     }
     
 
-    useEffect(() => {
-        if(birthTime === 0){
-            navigate("/wish_msg");
-        }
-    },[birthTime])
-
 
     return(
         <>

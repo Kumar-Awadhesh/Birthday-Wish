@@ -60,7 +60,7 @@ const Dashboard = () => {
     console.log(birthTime)
     useEffect(() => {
         if(login && birthTime === 0){
-            navigate("/wish_msg");
+            navigate("/birth_cake");
         }
     },[birthTime])
 

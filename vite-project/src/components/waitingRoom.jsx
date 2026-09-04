@@ -46,7 +46,7 @@ const WaitingRoom = () => {
     }, [timeLeft])
 
     useEffect(() => {
-        if(timeLeft === 0){
+        if(timeLeft >= 0){
             navigate("/birth_cake")
         }
     },[timeLeft])
