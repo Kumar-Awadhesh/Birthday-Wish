@@ -63,30 +63,32 @@
 .sidebar{
     height: 90vh;
     position: absolute;
-    width: 50%;
+    width: auto;
     padding: 5px;
     color: pink;
+    transition: 0.3s ease;
     background-color: rgb(0,0,0,0.8);
 }
+
 
 .sidebar-options{
     font-style: italic;
 }
 
-.sidebar-options>h4{
+.sidebar-options>h3{
     height: 30px;
     margin-top: 20px;
     transition: 0.3s ease;
 
 }
 
-.sidebar-options>h4:hover{
+.sidebar-options>h3:hover{
     cursor: pointer;
-    font-size: larger;
+    font-size: x-large;
 
 }
 
-.sidebar-options>h4:first-child{
+.sidebar-options>h3:first-child{
    margin-bottom: 50px;
 }
 
@@ -362,6 +364,10 @@
     background-size: cover;
     opacity: 0.5;
     
+}
+
+.open-when-sidebar>h4:hover{
+    cursor: pointer;
 }
 
 

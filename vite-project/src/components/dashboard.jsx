@@ -6,6 +6,7 @@ const Dashboard = () => {
     const [userName, setUserName] = useState("");
     const [searchField, setSearchField] = useState(false);
     const [sideBar, setSideBar] = useState(false);
+    const [openWhen, setOpenWhen] = useState(false);
     const navigate = useNavigate();
     const { user, setUser, login, setLogin, birthTime, setBirthTime } = useContext(BirthdayContext);
 
@@ -76,11 +77,21 @@ const Dashboard = () => {
                                 <h3></h3>
                                 <div className="sidebar-options">
                                     <h2 className="user-name">{User}</h2>
-                                    <h4 onClick={(e)=> navigate("/waiting")}>Waiting Room</h4>
-                                    <h4 onClick={(e)=> navigate("/birth_cake")}>Birthday Cake</h4>
-                                    <h4 onClick={(e)=> navigate("/wish_msg")}>Wishes</h4>
-                                    <h4 onClick={(e)=> navigate("/open_when")}>Open When...</h4>
-                                    <h4>My Collection</h4>
+                                    <h3 onClick={(e)=> navigate("/waiting")}>Waiting Room</h3>
+                                    <h3 onClick={(e)=> navigate("/birth_cake")}>Birthday Cake</h3>
+                                    <h3 onClick={(e)=> navigate("/wish_msg")}>Wishes</h3>
+                                    <h3 onClick={()=> {
+                                        openWhen ? setOpenWhen(false) : setOpenWhen(true)
+                                    }}>Open When...</h3>
+                                    {
+                                        openWhen &&
+                                        <div className="open-when-sidebar smooth-navigation" onClick={(e)=> navigate("/open_when")}>
+                                        <h4>__You are Feeling Down!</h4>
+                                        <h4>__You are Feeling Lonely!</h4>
+                                        <h4>__You need Inspiration!</h4>
+                                    </div>
+                                    }
+                                    <h3>My Collection</h3>
                                 </div>
                             </div>
                         }
