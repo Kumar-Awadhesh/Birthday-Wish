@@ -4,7 +4,7 @@
 
 .container{
     width: 320px;
-    height: 90vh;
+    height: 85vh;
     margin: auto;
     background: url("/images/dashboard_theme.png");
     background-position: top;
@@ -61,12 +61,12 @@
 }
 
 .sidebar{
-    height: 90vh;
+    height: 85vh;
+    width: 45%;
     position: absolute;
-    width: auto;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 5px;
     color: pink;
-    transition: 0.3s ease;
     background-color: rgb(0,0,0,0.8);
 }
 
@@ -118,7 +118,7 @@
 .waiting-container{
     
     width: 320px;
-    height: 90vh;
+    height: 85vh;
     margin: auto;
     align-content: center;
 
@@ -146,12 +146,12 @@
 
 .birth-cake-container{
     width: 320px;
-    height: 90vh;
+    height: 85vh;
     margin: auto;
 }
 
 .cake-img-container-before{
-    height: 90vh;
+    height: 85vh;
     align-content: end;
     text-align: center;
     background: url("/images/dashboard_theme.png");
@@ -200,7 +200,7 @@
 
 
 .celebration-container-after{
-    height: 90vh;
+    height: 85vh;
     align-content: center;
     background: url("/images/celebration-theme.gif");
     background-position: center;
@@ -219,7 +219,7 @@
 
 .birthday-wish-msg-container{
     width: 320px;
-    height: 90vh;
+    height: 85vh;
     margin: auto;
     align-content: center;
     background: url("/images/dashboard_theme.png");
@@ -366,11 +366,28 @@
     
 }
 
-.open-when-sidebar>h4:hover{
-    cursor: pointer;
+.open-when-sidebar{
+    line-height: 2;
+}
+
+.open-when-sidebar>h4{
+    height: 30px;
+    transition: 0.3s ease;
 }
 
 
-/* iframe{
+.open-when-sidebar>h4:hover{
+    cursor: pointer;
+    font-size: large;
+}
 
-} */
+.sidebar:has( .open-when-sidebar>h4),
+.sidebar.expanded{
+    width: auto;
+}
+
+
+iframe{
+    height: 50px;
+    margin-top: 20px;
+}
