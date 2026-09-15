@@ -8,7 +8,10 @@ const Dashboard = () => {
     const [sideBar, setSideBar] = useState(false);
     const [openWhen, setOpenWhen] = useState(false);
     const navigate = useNavigate();
-    const { user, setUser, login, setLogin, birthTime, setBirthTime } = useContext(BirthdayContext);
+    const { 
+            user, setUser, login, setLogin, birthTime, setBirthTime,
+            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration
+        } = useContext(BirthdayContext);
 
 
     const User = localStorage.getItem("User");
@@ -85,10 +88,37 @@ const Dashboard = () => {
                                     }}>Open When...</h3>
                                     {
                                         openWhen &&
-                                        <div className="open-when-sidebar smooth-navigation" onClick={(e)=> navigate("/open_when")}>
-                                        <h4>__You are Feeling Down!</h4>
-                                        <h4>__You are Feeling Lonely!</h4>
-                                        <h4>__You need Inspiration!</h4>
+                                        <div className="open-when-sidebar smooth-navigation" >
+                                        <h4 
+                                            onClick={()=> 
+                                                {
+                                                    setMoodDown(true);
+                                                    setLonely(false);
+                                                    setInspiration(false);
+                                                    navigate("/open_when");
+                                                }
+                                            }
+                                        >__You are Feeling Down!</h4>
+                                        <h4
+                                            onClick={()=> 
+                                                {
+                                                    setLonely(true);
+                                                    setMoodDown(false);
+                                                    setInspiration(false);
+                                                    navigate("/open_when");
+                                                }
+                                            }
+                                        >__You are Feeling Lonely!</h4>
+                                        <h4
+                                            onClick={()=> 
+                                                {
+                                                    setInspiration(true);
+                                                    setMoodDown(false);
+                                                    setLonely(false);
+                                                    navigate("/open_when");
+                                                }
+                                            }
+                                        >__You need Inspiration!</h4>
                                     </div>
                                     }
                                     <h3>My Collection</h3>

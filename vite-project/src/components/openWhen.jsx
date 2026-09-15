@@ -1,15 +1,34 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { BirthdayContext } from "../authorization/birthdayContext";
 
 
 const OpenWhen = () => {
 
 
+    const {moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration} = useContext(BirthdayContext);
+
 
     return(
         <>
             <main className="open-when-container smooth-navigation">
-               {/* <iframe src="https://audio.com/image-2/audio/selena-gomez-who-says-lyrics" frameborder="1"  ></iframe>  */}
-               <h2>More Comming Soon... <br /> Keep in Touch!</h2>
+               {
+                inspiration &&
+                    <div>
+                        <iframe src="https://audio.com/image-2/audio/selena-gomez-who-says-lyrics" frameborder="1" scrolling="no"  ></iframe>
+                    </div> 
+                }
+                {
+                    moodDown &&
+                    <div>
+                        <iframe src="https://audio.com/stacy-powell/audio/katy-perry-teenage-dream-lyrics" frameborder="0" scrolling="no" ></iframe>
+                    </div>
+                }
+                {
+                    lonely &&
+                    <div>
+                        <iframe src="https://audio.com/shea-kelly/audio/ed-sheeran-azizam" frameborder="0" scrolling="no" ></iframe>
+                    </div>
+                }
                
             </main>
         </>
