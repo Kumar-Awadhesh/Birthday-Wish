@@ -7,10 +7,13 @@ const Dashboard = () => {
     const [searchField, setSearchField] = useState(false);
     const [sideBar, setSideBar] = useState(false);
     const [openWhen, setOpenWhen] = useState(false);
+    const [userPasskey, setUserPasskey] = useState("")
+    const [passKeyVerify, setPasskeyVerify] = useState(false)
     const navigate = useNavigate();
     const { 
             user, setUser, login, setLogin, birthTime, setBirthTime,
-            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration
+            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration, 
+            passkey, setPasskey
         } = useContext(BirthdayContext);
 
 
@@ -59,6 +62,18 @@ const Dashboard = () => {
     const wrongUserHandle = () => {
         alert("Ohh, if you're not the one then, it's not for you!");
         return;
+    }
+
+    const passkeyHandle = () => {
+        if(userPasskey === ""){
+            return(alert("Enter Passkey!"))
+        }
+        if(userPasskey === passkey){
+
+        }
+        else{
+            return(alert("Passkey Incorrect!"))
+        }
     }
     
 
@@ -121,7 +136,19 @@ const Dashboard = () => {
                                         >__You need Inspiration!</h4>
                                     </div>
                                     }
-                                    <h3>My Collection</h3>
+                                    <h3 onClick={()=> {
+                                        passKeyVerify ? setPasskeyVerify(false) : setPasskeyVerify(true)
+                                    }}>My Collection</h3>
+                                    {
+                                        passKeyVerify &&
+                                        <div className="my-collection-verifier-container">
+                                            <div className="my-collection-content">
+                                                <div className="passkey-cancel-btn-container"><button onClick={(e)=> setPasskeyVerify(false)}>X</button></div>
+                                                <input type="text" placeholder="Enter Passkey!" onChange={(e)=>setUserPasskey(e.target.value)} /> <br />
+                                                <button onClick={passkeyHandle}>Verify</button>
+                                            </div>
+                                        </div>
+                                    }
                                 </div>
                             </div>
                         }

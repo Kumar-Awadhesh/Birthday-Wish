@@ -386,6 +386,59 @@
     width: auto;
 }
 
+.my-collection-verifier-container{
+    position: absolute;
+    width: 300px;
+    align-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.my-collection-content{
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    background-color: rgba(0,0,0,1);
+}
+
+.passkey-cancel-btn-container{
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.passkey-cancel-btn-container>button{
+    border: none;
+    outline: none;
+    color: indianred;
+    background-color: transparent;
+}
+
+.my-collection-content>input{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    margin-bottom: 30px;
+    background-color: pink;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.my-collection-content>button{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    background-color: pink;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
 
 iframe{
     height: 450px;

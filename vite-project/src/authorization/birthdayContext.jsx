@@ -4,6 +4,7 @@ export const BirthdayContext = createContext();
 
 export const BirthContextProvider = ({children}) => {
     const [user, setUser] = useState("Elaichi");
+    const [passkey, setPasskey] = useState("Gabriel")
     const [login, setLogin] = useState(false);
     const [birthTime, setBirthTime] = useState(0);
     const [moodDown, setMoodDown] = useState(false);
@@ -15,7 +16,8 @@ export const BirthContextProvider = ({children}) => {
         <BirthdayContext.Provider value=
         {{
             user, setUser, login, setLogin, birthTime, setBirthTime,
-            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration
+            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
+            passkey, setPasskey
         }}>
         {children}</BirthdayContext.Provider>
     )
