@@ -363,7 +363,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5;
-    
+    overflow: scroll;
 }
 
 .open-when-sidebar{
@@ -413,10 +413,17 @@
 }
 
 .passkey-cancel-btn-container>button{
+    height: 25px;
     border: none;
     outline: none;
     color: indianred;
+    transition: 0.2s ease;
     background-color: transparent;
+}
+
+.passkey-cancel-btn-container>button:hover{
+    cursor: pointer;
+    font-size: medium;
 }
 
 .my-collection-content>input{
@@ -436,9 +443,27 @@
     outline: none;
     padding: 5px 10px 5px 10px;
     background-color: pink;
+    transition: 0.2s ease;
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
+.my-collection-content>button:hover{
+    cursor: pointer;
+    font-size: medium;
+    padding: 5px 10px 5px 10px;
+}
+
+.open-when-overlay{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    z-index: 1000;
+    background-image: linear-gradient(rgba(255,255,255,0.4)),
+    url("/images/open-when.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 iframe{
     height: 450px;

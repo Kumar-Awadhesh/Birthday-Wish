@@ -13,7 +13,7 @@ const Dashboard = () => {
     const { 
             user, setUser, login, setLogin, birthTime, setBirthTime,
             moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration, 
-            passkey, setPasskey
+            passkey, setPasskey, myCollection, setMyCollection
         } = useContext(BirthdayContext);
 
 
@@ -68,8 +68,13 @@ const Dashboard = () => {
         if(userPasskey === ""){
             return(alert("Enter Passkey!"))
         }
-        if(userPasskey === passkey){
-
+        if(userPasskey.toLocaleLowerCase() === passkey.toLocaleLowerCase()){
+            alert("Passkey Verified Successfully!")
+            setLonely(false);
+            setMoodDown(false);
+            setInspiration(false);
+            setMyCollection(true);
+            navigate("/open_when")
         }
         else{
             return(alert("Passkey Incorrect!"))
@@ -110,6 +115,7 @@ const Dashboard = () => {
                                                     setMoodDown(true);
                                                     setLonely(false);
                                                     setInspiration(false);
+                                                    setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
                                             }
@@ -120,6 +126,7 @@ const Dashboard = () => {
                                                     setLonely(true);
                                                     setMoodDown(false);
                                                     setInspiration(false);
+                                                    setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
                                             }
@@ -130,6 +137,7 @@ const Dashboard = () => {
                                                     setInspiration(true);
                                                     setMoodDown(false);
                                                     setLonely(false);
+                                                    setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
                                             }
