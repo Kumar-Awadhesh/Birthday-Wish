@@ -18,7 +18,7 @@ const Dashboard = () => {
 
 
     const User = localStorage.getItem("User");
-    console.log(birthTime)
+    
 
     useEffect(() => {
         if (User?.toLocaleLowerCase() === user.toLocaleLowerCase()) {

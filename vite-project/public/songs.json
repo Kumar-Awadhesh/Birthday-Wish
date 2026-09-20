@@ -1,0 +1,109 @@
+{
+    "openWhen": {
+        "inspiration": [
+            {
+                "id": 1,
+                "song": "https://audio.com/image-2/audio/selena-gomez-who-says-lyrics"
+            }   
+        ],
+        "moodDown": [
+            {
+                "id": 1,
+                "song": "https://audio.com/image-2/audio/selena-gomez-who-says-lyrics"
+            }   
+        ],
+        "lonely": [
+            {
+                "id": 1,
+                "song": "https://audio.com/image-2/audio/selena-gomez-who-says-lyrics"
+            }   
+        ],
+        "mycollection": [
+            {
+                "id": 1,
+                "song": "https://audio.com/jan-patrick-galiste/audio/enrique-eglesias-hero"
+            },
+            {
+                "id": 2,
+                "song": "https://audio.com/ellendyrosas/audio/enrique-iglesias-escape"
+            },
+            {
+                "id": 3,
+                "song": "https://audio.com/david-gomez-1846666436191074/audio/feel-me-selena-gomez"
+            },
+            {
+                "id": 4,
+                "song": "https://audio.com/abc-xyz-1832914660532217/audio/2u-justin-bieber"
+            },
+            {
+                "id": 4,
+                "song": "https://audio.com/olivia-petit/audio/katy-perry-chained-to-the-rhythm-official-ft-1"
+            },
+            {
+                "id": 5,
+                "song": "https://audio.com/kratos-1831442164907108/audio/enrique-iglesias-be-with-you"
+            },
+            {
+                "id": 6,
+                "song": "https://audio.com/donnybucks15/audio/spotidownapp-cold-water-feat-justin-bieber-moe-major-lazer"
+            },
+            {
+                "id": 7,
+                "song": "https://audio.com/donnybucks15/audio/thatpower-william-justin-bieber"
+            },
+            {
+                "id": 8,
+                "song": "https://audio.com/2013venjix/audio/katy-perry-roar-2013venjix-godzilla-mix"
+            },
+            {
+                "id": 9,
+                "song": "https://audio.com/rocco-montebello/audio/payphone-maroon-5"
+            },
+            {
+                "id": 10,
+                "song": "https://audio.com/donnybucks15/audio/i-don-t-care"
+            },
+            {
+                "id": 11,
+                "song": "https://audio.com/megannneyekon/audio/linkin-park-in-the-end"
+            },
+            {
+                "id": 12,
+                "song": "https://audio.com/david-gomez-1846666436191074/audio/maps-maroon-5"
+            },
+            {
+                "id": 13,
+                "song": "https://audio.com/raul-andrade-2/audio/stephen-sanchez-until-i-found-you-official-video"
+            },
+            {
+                "id": 14,
+                "song": "https://audio.com/nesa808/audio/16-justin-wellington-iko-iko-my-bestie-feat-small-jam"
+            },
+            {
+                "id": 15,
+                "song": "https://audio.com/hola416040/audio/what-lovers-do-maroon-5-sza-us-uk"
+            },
+            {
+                "id": 16,
+                "song": "https://audio.com/kamil-chbeir/audio/dua-lipa-houdini"
+            },
+            {
+                "id": 17,
+                "song": "https://audio.com/alegra-1/audio/one-thing-one-direction"
+            },
+            {
+                "id": 18,
+                "song": "https://audio.com/don-toliver-3/audio/light-switch-charlie-puth-us-uk"
+            },
+            {
+                "id": 19,
+                "song": "https://audio.com/wisso/audio/something-just-like-this-the-chainsmokers"
+            },
+            {
+                "id": 20,
+                "song": "https://audio.com/lizbeth-sanchez/audio/charlie-puth-left-and-right-lyrics-ft"
+            }
+
+        ]
+    }
+}

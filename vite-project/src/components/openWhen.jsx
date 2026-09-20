@@ -1,9 +1,10 @@
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { BirthdayContext } from "../authorization/birthdayContext";
+import axios from "axios";
 
 
 const OpenWhen = () => {
-
+    const [songs, setSongs] = useState([]);
 
     const {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
@@ -11,11 +12,27 @@ const OpenWhen = () => {
     } = useContext(BirthdayContext);
 
 
+    useEffect(() => {
+        const getSongs = async () => {
+            try {
+                const song = await axios.get("/songs.json")
+                setSongs(song.data)
+            } 
+            catch (error) {
+                console.log(error)
+            }
+
+        }
+        getSongs()
+    }, [])
+
+
     return(
         <>
             <main className="open-when-container smooth-navigation">
                {
                 inspiration &&
+
                     <div>
                         <div className="open-when-overlay"></div>
                         <iframe src="https://audio.com/image-2/audio/selena-gomez-who-says-lyrics" frameborder="1" scrolling="no"  ></iframe>
@@ -37,11 +54,12 @@ const OpenWhen = () => {
                 }
                 {
                     myCollection &&
-                    <div>
-                        {/* <div className="open-when-overlay"></div> */}
-                        <iframe src="https://audio.com/jan-patrick-galiste/audio/enrique-eglesias-hero" frameborder="0" scrolling="no"></iframe>
-                        <iframe src="https://audio.com/megannneyekon/audio/linkin-park-in-the-end" frameborder="0" scrolling="no"></iframe>
-                    </div>
+                    songs?.openWhen?.mycollection?.map((song, index)=> (
+                        <div key={song.id}>
+                            <div className="open-when-overlay"></div>
+                            <iframe src={song.song} frameborder="0" scrolling="no"></iframe>
+                        </div>
+                    ))
                 }
                
             </main>
