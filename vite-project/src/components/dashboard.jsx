@@ -8,7 +8,7 @@ const Dashboard = () => {
     const [sideBar, setSideBar] = useState(false);
     const [openWhen, setOpenWhen] = useState(false);
     const [userPasskey, setUserPasskey] = useState("")
-    const [passKeyVerify, setPasskeyVerify] = useState(false)
+    const [passKeyVerify, setPasskeyVerify] = useState(false);
     const navigate = useNavigate();
     const { 
             user, setUser, login, setLogin, birthTime, setBirthTime,
@@ -24,7 +24,12 @@ const Dashboard = () => {
         if (User?.toLocaleLowerCase() === user.toLocaleLowerCase()) {
             setLogin(true);
         }
-    }, [User])
+        else{
+            setLogin(false);
+            setSideBar(false);
+            localStorage.removeItem("passKey")
+        }
+    }, [login])
 
 
     let count = 0;
@@ -59,17 +64,21 @@ const Dashboard = () => {
 
     }
 
+
     const wrongUserHandle = () => {
         alert("Ohh, if you're not the one then, it's not for you!");
         return;
     }
 
+
+    
     const passkeyHandle = () => {
         if(userPasskey === ""){
             return(alert("Enter Passkey!"))
         }
         if(userPasskey.toLocaleLowerCase() === passkey.toLocaleLowerCase()){
             alert("Passkey Verified Successfully!")
+            localStorage.setItem("passKey", userPasskey);
             setLonely(false);
             setMoodDown(false);
             setInspiration(false);
@@ -80,7 +89,26 @@ const Dashboard = () => {
             return(alert("Passkey Incorrect!"))
         }
     }
+
+    const resetHandle = () => {
+        localStorage.removeItem("User")
+        localStorage.removeItem("passKey");
+        setLogin(false);
+        navigate("/");
+    }
     
+
+    const myCollectionHandle = () => {
+        if(localStorage.getItem("passKey") === "" || localStorage.getItem("passKey") === null){
+            setPasskeyVerify(true);
+        }
+        else{
+            const passKey = localStorage.getItem("passKey")
+            if(passKey.toLowerCase() === passkey.toLowerCase()){
+                navigate("/open_when");
+            }
+        }
+    }
 
 
     return (
@@ -100,6 +128,7 @@ const Dashboard = () => {
                                 <h3></h3>
                                 <div className="sidebar-options">
                                     <h2 className="user-name">{User}</h2>
+                                    <p onClick={resetHandle} className="logout-btn">Logout</p>
                                     <h3 onClick={(e)=> navigate("/waiting")}>Waiting Room</h3>
                                     <h3 onClick={(e)=> navigate("/birth_cake")}>Birthday Cake</h3>
                                     <h3 onClick={(e)=> navigate("/wish_msg")}>Wishes</h3>
@@ -144,15 +173,13 @@ const Dashboard = () => {
                                         >__You need Inspiration!</h4>
                                     </div>
                                     }
-                                    <h3 onClick={()=> {
-                                        passKeyVerify ? setPasskeyVerify(false) : setPasskeyVerify(true)
-                                    }}>My Collection</h3>
+                                    <h3 onClick={myCollectionHandle}>My Collection</h3>
                                     {
                                         passKeyVerify &&
                                         <div className="my-collection-verifier-container">
                                             <div className="my-collection-content">
                                                 <div className="passkey-cancel-btn-container"><button onClick={(e)=> setPasskeyVerify(false)}>X</button></div>
-                                                <input type="text" placeholder="Enter Passkey!" onChange={(e)=>setUserPasskey(e.target.value)} /> <br />
+                                                <input type="password" placeholder="Enter Passkey!" onChange={(e)=>setUserPasskey(e.target.value)} /> <br />
                                                 <button onClick={passkeyHandle}>Verify</button>
                                             </div>
                                         </div>
