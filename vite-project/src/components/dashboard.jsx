@@ -105,6 +105,7 @@ const Dashboard = () => {
         else{
             const passKey = localStorage.getItem("passKey")
             if(passKey.toLowerCase() === passkey.toLowerCase()){
+                setMyCollection(true);
                 navigate("/open_when");
             }
         }
