@@ -54,7 +54,7 @@ const OpenWhen = () => {
                 }
                 {
                     myCollection &&
-                    songs?.openWhen?.mycollection?.map((song, index)=> (
+                    songs.openWhen.mycollection.map((song, index)=> (
                         <div key={song.id}>
                             <div className="open-when-overlay"></div>
                             <iframe src={song.song} frameborder="0" scrolling="no"></iframe>

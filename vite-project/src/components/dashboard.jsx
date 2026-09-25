@@ -10,21 +10,21 @@ const Dashboard = () => {
     const [userPasskey, setUserPasskey] = useState("")
     const [passKeyVerify, setPasskeyVerify] = useState(false);
     const navigate = useNavigate();
-    const { 
-            user, setUser, login, setLogin, birthTime, setBirthTime,
-            moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration, 
-            passkey, setPasskey, myCollection, setMyCollection
-        } = useContext(BirthdayContext);
+    const {
+        user, setUser, login, setLogin, birthTime, setBirthTime,
+        moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
+        passkey, setPasskey, myCollection, setMyCollection
+    } = useContext(BirthdayContext);
 
 
     const User = localStorage.getItem("User");
-    
+
 
     useEffect(() => {
         if (User?.toLocaleLowerCase() === user.toLocaleLowerCase()) {
             setLogin(true);
         }
-        else{
+        else {
             setLogin(false);
             setSideBar(false);
             localStorage.removeItem("passKey")
@@ -71,12 +71,12 @@ const Dashboard = () => {
     }
 
 
-    
+
     const passkeyHandle = () => {
-        if(userPasskey === ""){
-            return(alert("Enter Passkey!"))
+        if (userPasskey === "") {
+            return (alert("Enter Passkey!"))
         }
-        if(userPasskey.toLocaleLowerCase() === passkey.toLocaleLowerCase()){
+        if (userPasskey.toLocaleLowerCase() === passkey.toLocaleLowerCase()) {
             alert("Passkey Verified Successfully!")
             localStorage.setItem("passKey", userPasskey);
             setLonely(false);
@@ -85,8 +85,8 @@ const Dashboard = () => {
             setMyCollection(true);
             navigate("/open_when")
         }
-        else{
-            return(alert("Passkey Incorrect!"))
+        else {
+            return (alert("Passkey Incorrect!"))
         }
     }
 
@@ -96,15 +96,18 @@ const Dashboard = () => {
         setLogin(false);
         navigate("/");
     }
-    
+
 
     const myCollectionHandle = () => {
-        if(localStorage.getItem("passKey") === "" || localStorage.getItem("passKey") === null){
+        if (localStorage.getItem("passKey") === "" || localStorage.getItem("passKey") === null) {
             setPasskeyVerify(true);
         }
-        else{
+        else {
             const passKey = localStorage.getItem("passKey")
-            if(passKey.toLowerCase() === passkey.toLowerCase()){
+            if (passKey.toLowerCase() === passkey.toLowerCase()) {
+                setLonely(false);
+                setMoodDown(false);
+                setInspiration(false);
                 setMyCollection(true);
                 navigate("/open_when");
             }
@@ -130,57 +133,54 @@ const Dashboard = () => {
                                 <div className="sidebar-options">
                                     <h2 className="user-name">{User}</h2>
                                     <p onClick={resetHandle} className="logout-btn">Logout</p>
-                                    <h3 onClick={(e)=> navigate("/waiting")}>Waiting Room</h3>
-                                    <h3 onClick={(e)=> navigate("/birth_cake")}>Birthday Cake</h3>
-                                    <h3 onClick={(e)=> navigate("/wish_msg")}>Wishes</h3>
-                                    <h3 onClick={()=> {
+                                    <h3 onClick={(e) => navigate("/waiting")}>Waiting Room</h3>
+                                    <h3 onClick={(e) => navigate("/birth_cake")}>Birthday Cake</h3>
+                                    <h3 onClick={(e) => navigate("/wish_msg")}>Wishes</h3>
+                                    <h3 onClick={() => {
                                         openWhen ? setOpenWhen(false) : setOpenWhen(true)
                                     }}>Open When...</h3>
                                     {
                                         openWhen &&
                                         <div className="open-when-sidebar smooth-navigation" >
-                                        <h4 
-                                            onClick={()=> 
-                                                {
+                                            <h4
+                                                onClick={() => {
                                                     setMoodDown(true);
                                                     setLonely(false);
                                                     setInspiration(false);
                                                     setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
-                                            }
-                                        >__You are Feeling Down!</h4>
-                                        <h4
-                                            onClick={()=> 
-                                                {
+                                                }
+                                            >__You are Feeling Down!</h4>
+                                            <h4
+                                                onClick={() => {
                                                     setLonely(true);
                                                     setMoodDown(false);
                                                     setInspiration(false);
                                                     setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
-                                            }
-                                        >__You are Feeling Lonely!</h4>
-                                        <h4
-                                            onClick={()=> 
-                                                {
+                                                }
+                                            >__You are Feeling Lonely!</h4>
+                                            <h4
+                                                onClick={() => {
                                                     setInspiration(true);
                                                     setMoodDown(false);
                                                     setLonely(false);
                                                     setMyCollection(false);
                                                     navigate("/open_when");
                                                 }
-                                            }
-                                        >__You need Inspiration!</h4>
-                                    </div>
+                                                }
+                                            >__You need Inspiration!</h4>
+                                        </div>
                                     }
                                     <h3 onClick={myCollectionHandle}>My Collection</h3>
                                     {
                                         passKeyVerify &&
                                         <div className="my-collection-verifier-container">
                                             <div className="my-collection-content">
-                                                <div className="passkey-cancel-btn-container"><button onClick={(e)=> setPasskeyVerify(false)}>X</button></div>
-                                                <input type="password" placeholder="Enter Passkey!" onChange={(e)=>setUserPasskey(e.target.value)} /> <br />
+                                                <div className="passkey-cancel-btn-container"><button onClick={(e) => setPasskeyVerify(false)}>X</button></div>
+                                                <input type="password" placeholder="Enter Passkey!" onChange={(e) => setUserPasskey(e.target.value)} /> <br />
                                                 <button onClick={passkeyHandle}>Verify</button>
                                             </div>
                                         </div>
