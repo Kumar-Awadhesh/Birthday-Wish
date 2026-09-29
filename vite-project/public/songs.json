@@ -14,13 +14,21 @@
             {
                 "id": 1,
                 "song": "https://audio.com/2013venjix/audio/katy-perry-roar-2013venjix-godzilla-mix"
-            }   
+            },
+            {
+                "id": 2,
+                "song": "https://audio.com/kamil-chbeir/audio/blank-space-taylor-swift"
+            }
         ],
         "lonely": [
             {
                 "id": 1,
                 "song": "https://audio.com/anna-1867369262008560/audio/selena-gomez-ft-marshmello-wolves"
-            }   
+            },
+            {
+                "id": 2,
+                "song": "https://audio.com/kiki-1867886586880029/audio/taylor-swift-the-archer-1"
+            }
         ],
         "mycollection": [
             {
@@ -142,6 +150,14 @@
             {
                 "id": 30,
                 "song": "https://audio.com/lucas-1846074181533337/audio/katy-perry-california-gurls-lyrics-feat-snoop-dogg"
+            },
+            {
+                "id": 31,
+                "song": "https://audio.com/anna-1867369262008560/audio/taylor-swift-cruel-summer"
+            },
+            {
+                "id": 32,
+                "song": "https://audio.com/gaurav-kasania/audio/enrique-iglesias-wish-i-was-your-lover"
             }
 
         ]
