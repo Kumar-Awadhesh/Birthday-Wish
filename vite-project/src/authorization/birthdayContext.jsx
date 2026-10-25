@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const BirthdayContext = createContext();
 
 export const BirthContextProvider = ({children}) => {
-    const [user, setUser] = useState("Elaichi");
+    const [user, setUser] = useState(["elaichi", "priya"]);
     const [passkey, setPasskey] = useState("Gabriel")
     const [login, setLogin] = useState(false);
     const [birthTime, setBirthTime] = useState(0);

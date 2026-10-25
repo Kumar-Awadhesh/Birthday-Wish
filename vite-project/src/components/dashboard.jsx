@@ -16,12 +16,12 @@ const Dashboard = () => {
         passkey, setPasskey, myCollection, setMyCollection
     } = useContext(BirthdayContext);
 
-
+    
     const User = localStorage.getItem("User");
 
 
     useEffect(() => {
-        if (User?.toLocaleLowerCase() === user.toLocaleLowerCase()) {
+        if (user?.includes(User?.toLocaleLowerCase())) {
             setLogin(true);
         }
         else {
@@ -36,11 +36,16 @@ const Dashboard = () => {
     const userAuthentication = () => {
         localStorage.setItem("User", userName);
         if (userName !== "") {
-            if (user.toLocaleLowerCase() === userName.toLocaleLowerCase()) {
+            if (user.includes(userName?.toLocaleLowerCase())) {
                 alert(
-                    "It is you! my Elaichi!!, Now.. let me take you to your Surprise!"
+                    `It is you! my ${userName}!!, Now.. let me take you to your Surprise!`
                 );
-                navigate("/waiting")
+                if(userName.toLocaleLowerCase() === "priya"){
+                    navigate("/waiting_hall")
+                }
+                else if(userName.toLocaleLowerCase() === "elaichi"){
+                    navigate("/waiting")
+                }
             }
             else if (userName.toLocaleLowerCase() === "titli" || userName.toLocaleLowerCase() === "biscuit" || userName.toLocaleLowerCase() === "sunshine") {
                 alert("not this one! more and very special name of yours!")
@@ -133,9 +138,30 @@ const Dashboard = () => {
                                 <div className="sidebar-options">
                                     <h2 className="user-name">{User}</h2>
                                     <p onClick={resetHandle} className="logout-btn">Logout</p>
-                                    <h3 onClick={(e) => navigate("/waiting")}>Waiting Room</h3>
-                                    <h3 onClick={(e) => navigate("/birth_cake")}>Birthday Cake</h3>
-                                    <h3 onClick={(e) => navigate("/wish_msg")}>Wishes</h3>
+                                    <h3 onClick={() => {
+                                        if(User.toLocaleLowerCase() === "priya"){
+                                            navigate("/waiting_hall")
+                                        }
+                                        else if(User.toLocaleLowerCase() === "elaichi"){
+                                            navigate("/waiting")
+                                        }
+                                    }}>Waiting Room</h3>
+                                    <h3 onClick={() => {
+                                        if(User.toLocaleLowerCase() === "priya"){
+                                            navigate("/birthday_cake")
+                                        }
+                                        else if(User.toLocaleLowerCase() === "elaichi"){
+                                            navigate("/birth_cake")
+                                        }
+                                    }}>Birthday Cake</h3>
+                                    <h3 onClick={(e) => {
+                                        if(User.toLocaleLowerCase() === "priya"){
+                                            navigate("/birth_wish_msg")
+                                        }
+                                        else if(User.toLocaleLowerCase() === "elaichi"){
+                                            navigate("/wish_msg")
+                                        }
+                                    }}>Wishes</h3>
                                     <h3 onClick={() => {
                                         openWhen ? setOpenWhen(false) : setOpenWhen(true)
                                     }}>Open When...</h3>

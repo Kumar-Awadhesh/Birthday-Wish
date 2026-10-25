@@ -136,8 +136,8 @@
 .waiting-msg{
     color: lightpink;
     text-align: center;
-    margin-top: -145px;
-    margin-bottom: 20px;
+    margin-top: -150px;
+    margin-bottom: 5px;
     font-size: 22px;
     font-family: unset;
     font-style: italic;
@@ -160,9 +160,9 @@
 }
 
 .cake-img-container-before>img{
-    width: 200px;
+    width: 230px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .cake-img-container-after{
@@ -170,7 +170,7 @@
 }
 
 .celebrate-msg-container{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 5px;
     color: palevioletred;
     font-style: oblique;
@@ -233,16 +233,17 @@
 
 .menu-icons{
     width: 320px;
-    height: 40px;
+    height: 30px;
     margin: auto;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
     background-color: rgb(48, 7, 7);
 }
 
 .menu-icons>img{
-    width: 30px;
+    width: 25px;
+    height: 25px;
     padding: 3px;
 }
 

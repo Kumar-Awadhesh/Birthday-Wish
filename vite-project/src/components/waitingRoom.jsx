@@ -46,8 +46,14 @@ const WaitingRoom = () => {
     }, [timeLeft])
 
     useEffect(() => {
-        if(timeLeft >= 0){
-            navigate("/birth_cake")
+        if(timeLeft <= 0){
+            setDay(0);
+            setHour(0);
+            setMinute(0);
+            setSecond(0);
+            setTimeout(()=>{
+                navigate("/birth_cake")
+            },1000)
         }
     },[timeLeft])
 
