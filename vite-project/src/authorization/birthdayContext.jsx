@@ -11,6 +11,7 @@ export const BirthContextProvider = ({children}) => {
     const [lonely, setLonely] = useState(false);
     const [inspiration, setInspiration] = useState(false);
     const [myCollection, setMyCollection] = useState(false);
+    const [manyMood, setManyMood] = useState(false);
 
 
     return(
@@ -18,7 +19,7 @@ export const BirthContextProvider = ({children}) => {
         {{
             user, setUser, login, setLogin, birthTime, setBirthTime,
             moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
-            passkey, setPasskey, myCollection, setMyCollection
+            passkey, setPasskey, myCollection, setMyCollection, manyMood, setManyMood
         }}>
         {children}</BirthdayContext.Provider>
     )

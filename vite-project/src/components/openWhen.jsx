@@ -8,7 +8,7 @@ const OpenWhen = () => {
 
     const {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
-        myCollection, setMyCollection
+        myCollection, setMyCollection, manyMood, setManyMood
     } = useContext(BirthdayContext);
 
 
@@ -56,6 +56,15 @@ const OpenWhen = () => {
                         <div key={song.id}>
                             <div className="open-when-overlay"></div>
                             <iframe src={song.song} frameBorder="0" scrolling="no"></iframe>
+                        </div>
+                    ))
+                }
+                {
+                    manyMood &&
+                    songs?.openWhen?.manyMood?.map((song, index)=> (
+                        <div key={song.id}>
+                            <div className="open-when-overlay"></div>
+                            <iframe className="many-mood-iframe" src={song.song} frameBorder="0" scrolling="no" ></iframe>
                         </div>
                     ))
                 }

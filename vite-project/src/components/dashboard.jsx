@@ -13,7 +13,7 @@ const Dashboard = () => {
     const {
         user, setUser, login, setLogin, birthTime, setBirthTime,
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
-        passkey, setPasskey, myCollection, setMyCollection
+        passkey, setPasskey, myCollection, setMyCollection, manyMood, setManyMood
     } = useContext(BirthdayContext);
 
     
@@ -198,6 +198,17 @@ const Dashboard = () => {
                                                 }
                                                 }
                                             >__You need Inspiration!</h4>
+                                            <h4
+                                                onClick={() => {
+                                                    setManyMood(true);
+                                                    setInspiration(false);
+                                                    setMoodDown(false);
+                                                    setLonely(false);
+                                                    setMyCollection(false);
+                                                    navigate("/open_when");
+                                                }
+                                                }
+                                            >__many mood of your's - Retro!</h4>
                                         </div>
                                     }
                                     <h3 onClick={myCollectionHandle}>My Collection</h3>

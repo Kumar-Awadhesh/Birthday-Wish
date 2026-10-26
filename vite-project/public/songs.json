@@ -30,6 +30,48 @@
                 "song": "https://audio.com/kiki-1867886586880029/audio/taylor-swift-the-archer-1"
             }
         ],
+        "manyMood":[
+            {
+                "id": 1,
+                "song": "https://www.youtube.com/embed/cuB4LPx-y0U?si=mWhH2-ovG9ZzvqOZ"
+            },
+            {
+                "id": 2,
+                "song": "https://www.youtube.com/embed/uHjZi-UhBZY?si=fppgfB7zX2kOl3rh"
+            },
+            {
+                "id": 3,
+                "song": "https://www.youtube.com/embed/vaKSzhDc8QI?si=n1C_zImet48rYgAY"
+            },
+            {
+                "id": 4,
+                "song": "https://www.youtube.com/embed/RyF1oByf_VU?si=VxKDW9fBbAMuWj2E"
+            },
+            {
+                "id": 5, 
+                "song": "https://www.youtube.com/embed/z-zk6AO6XUk?si=jDbxOSYHxgIYhpEc"
+            },
+            {
+                "id": 6,
+                "song": "https://www.youtube.com/embed/sKZqOFeSnuI?si=Vpqt70j4sujaz24y"
+            },
+            {
+                "id": 7,
+                "song": "https://www.youtube.com/embed/BRQ04W_YSKE?si=Vg5qNIi0beouuvGr"
+            },
+            {
+                "id": 8,
+                "song": "https://www.youtube.com/embed/LMHsugPbu7s?si=SMqdJKMROxQWgL48"
+            },
+            {
+                "id": 9,
+                "song": "https://www.youtube.com/embed/4Ihgf6p-SV4?si=Hp0qCMAPNkcsDXig"
+            },
+            {
+                "id": 10,
+                "song": "https://www.youtube.com/embed/2zeqv3Zg36A?si=r9rsEKJaTpF4pprW"
+            }
+        ],
         "mycollection": [
             {
                 "id": 1,
