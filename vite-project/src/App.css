@@ -4,7 +4,7 @@
 
 .container{
     width: 320px;
-    height: 85vh;
+    height: 100dvh;
     margin: auto;
     background: url("/images/dashboard_theme.png");
     background-position: top;
@@ -60,7 +60,7 @@
 }
 
 .sidebar{
-    height: 85vh;
+    height: 100dvh;
     width: 45%;
     position: absolute;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -150,7 +150,7 @@
 }
 
 .cake-img-container-before{
-    height: 85vh;
+    height: 100dvh;
     align-content: end;
     text-align: center;
     background: url("/images/dashboard_theme.png");
@@ -199,9 +199,8 @@
 
 
 .celebration-container-after{
-    height: 85vh;
+    height: 100dvh;
     align-content: center;
-    background: url("/images/celebration-theme.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

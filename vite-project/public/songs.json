@@ -201,7 +201,24 @@
                 "id": 32,
                 "song": "https://audio.com/gaurav-kasania/audio/enrique-iglesias-wish-i-was-your-lover"
             }
-
+        ],
+        "hindiRetro": [
+            {
+                "id": 1,
+                "song": "https://audio.com/jayprakashsongsold95/audio/pal-bhar-ke-liye"
+            },
+            {
+                "id": 2,
+                "song": "https://www.youtube.com/embed/dBuOh1CqoF8?si=fdu8ELJoiiuZ8o5_"
+            },
+            {
+                "id": 3,
+                "song": "https://www.youtube.com/embed/9i-I088hK8c?si=ll6VYP1XMroo8aSE"
+            },
+            {
+                "id": 4,
+                "song": "https://www.youtube.com/embed/rrVrwa1xHdI?si=B5pSqE2xgEVryogv"
+            }
         ]
     }
 }
