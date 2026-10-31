@@ -1,8 +1,8 @@
-*{
+* {
     margin: 0;
 }
 
-.container{
+.container {
     width: 320px;
     height: 100dvh;
     margin: auto;
@@ -10,10 +10,10 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
-.navbar-container{
+.navbar-container {
     width: 320px;
     margin: auto;
     background: url("/images/dashboard_theme.png");
@@ -22,7 +22,7 @@
     background-size: fill;
 }
 
-.header{
+.header {
     text-align: center;
     padding: 10px;
     font-family: fantasy;
@@ -30,68 +30,68 @@
     color: rgb(235, 137, 137);
 }
 
-.logout-btn{
-  
-  color: pink;
-  padding-right: 5px;
-  margin-bottom: 50px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.logout-btn {
+
+    color: pink;
+    padding-right: 5px;
+    margin-bottom: 50px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.logout-btn:hover{
+.logout-btn:hover {
     cursor: pointer;
 
 }
 
-.navbar>img{
+.navbar>img {
     width: 20px;
     border-radius: 10px;
     background-color: pink;
 }
 
-.navbar>img:hover{
+.navbar>img:hover {
     cursor: pointer;
     background-color: red;
 }
 
-.user-name{
+.user-name {
     text-align: center;
     color: red;
 }
 
-.sidebar{
+.sidebar {
     height: 100dvh;
     width: 45%;
     position: absolute;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 5px;
     color: pink;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0, 0, 0, 0.8);
 }
 
 
-.sidebar-options{
+.sidebar-options {
     font-style: italic;
 }
 
-.sidebar-options>h3{
+.sidebar-options>h3 {
     height: 30px;
     margin-top: 20px;
     transition: 0.3s ease;
 
 }
 
-.sidebar-options>h3:hover{
+.sidebar-options>h3:hover {
     cursor: pointer;
     font-size: x-large;
 
 }
 
-.sidebar-options>h3:first-child{
-   margin-bottom: 50px;
+.sidebar-options>h3:first-child {
+    margin-bottom: 50px;
 }
 
-.smooth-navigation{
+.smooth-navigation {
     animation: nextPage 0.5s ease both;
 }
 
@@ -100,13 +100,14 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.welcome-msg{
+.welcome-msg {
     margin: auto;
     text-align: center;
     color: pink;
@@ -114,8 +115,8 @@
     margin-top: 100px;
 }
 
-.waiting-container{
-    
+.waiting-container {
+
     width: 320px;
     height: 85vh;
     margin: auto;
@@ -127,13 +128,13 @@
     background-size: cover;
 }
 
-.time-stamp{
+.time-stamp {
     color: lightgreen;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.waiting-msg{
+.waiting-msg {
     color: lightpink;
     text-align: center;
     margin-top: -150px;
@@ -143,13 +144,13 @@
     font-style: italic;
 }
 
-.birth-cake-container{
+.birth-cake-container {
     width: 320px;
     height: 85vh;
     margin: auto;
 }
 
-.cake-img-container-before{
+.cake-img-container-before {
     height: 100dvh;
     align-content: end;
     text-align: center;
@@ -159,17 +160,17 @@
     background-size: cover;
 }
 
-.cake-img-container-before>img{
+.cake-img-container-before>img {
     width: 230px;
     margin: auto;
     margin-bottom: 15px;
 }
 
-.cake-img-container-after{
+.cake-img-container-after {
     display: none;
 }
 
-.celebrate-msg-container{
+.celebrate-msg-container {
     margin-bottom: 50px;
     padding: 5px;
     color: palevioletred;
@@ -178,27 +179,27 @@
     line-height: 1.5;
 }
 
-.candle-btn-container>button{
+.candle-btn-container>button {
     border: none;
     outline: none;
     padding: 10px 20px 10px 20px;
     font-size: large;
     font-style: oblique;
     font-weight: bolder;
-    background-color: rgb(0,0,0,0.5);
+    background-color: rgb(0, 0, 0, 0.5);
     color: pink;
     border-radius: 10px;
     margin-bottom: 30px;
 }
 
-.candle-btn-container>button:hover{
-    cursor:pointer;
-    background-color: rgb(0,0,0,0.6);
+.candle-btn-container>button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 0, 0, 0.6);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 
-.celebration-container-after{
+.celebration-container-after {
     height: 100dvh;
     align-content: center;
     background-position: center;
@@ -206,16 +207,16 @@
     background-size: cover;
 }
 
-.celebration-container-after>img{
+.celebration-container-after>img {
     width: 320px;
     height: 600px;
 }
 
-.celebration-container-before{
+.celebration-container-before {
     display: none;
 }
 
-.birthday-wish-msg-container{
+.birthday-wish-msg-container {
     width: 320px;
     height: 85vh;
     margin: auto;
@@ -226,11 +227,11 @@
     background-size: cover;
 }
 
-.wish-msg-container>img{
+.wish-msg-container>img {
     width: 320px;
 }
 
-.menu-icons{
+.menu-icons {
     width: 320px;
     height: 30px;
     margin: auto;
@@ -240,24 +241,24 @@
     background-color: rgb(48, 7, 7);
 }
 
-.menu-icons>img{
+.menu-icons>img {
     width: 25px;
     height: 25px;
     padding: 3px;
 }
 
-.menu-icons>img:hover{
+.menu-icons>img:hover {
     cursor: pointer;
     border-radius: 50%;
     background-color: rgb(17, 13, 27);
 }
 
-.user-input-container{
+.user-input-container {
     text-align: center;
-    
+
 }
 
-.user-input-container>button{
+.user-input-container>button {
     padding: 10px 20px 10px 20px;
     border: none;
     outline: none;
@@ -265,11 +266,11 @@
     margin-left: 10px;
     border-radius: 5px;
     color: rgb(249, 132, 152);
-    background-color: rgb(0,0,0,0.5);
+    background-color: rgb(0, 0, 0, 0.5);
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
-.user-input-container>input{
+.user-input-container>input {
     width: 230px;
     height: 40px;
     margin-bottom: 30px;
@@ -280,40 +281,41 @@
     font-style: italic;
     border-radius: 5px;
     color: red;
-    background-color: rgb(0,0,0,0.5);
+    background-color: rgb(0, 0, 0, 0.5);
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
-.user-input-container>input::placeholder{
-    color: rgb(249, 132, 152);;
+.user-input-container>input::placeholder {
+    color: rgb(249, 132, 152);
+    ;
 }
 
-.user-input-container>button:hover{
+.user-input-container>button:hover {
     cursor: pointer;
-    background-color: rgb(0,0,0,0.8);
+    background-color: rgb(0, 0, 0, 0.8);
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
-.user-input-container>input:hover{
-    background-color: rgb(0,0,0,0.8);
+.user-input-container>input:hover {
+    background-color: rgb(0, 0, 0, 0.8);
     box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
-.user-verification-msg-container{
+.user-verification-msg-container {
     text-align: center;
     font-style: oblique;
     color: pink;
 }
 
-.user-verification-msg-container>h2{
+.user-verification-msg-container>h2 {
     padding-top: 50px;
 }
 
-.user-confirmation-btn-container{
+.user-confirmation-btn-container {
     margin-top: 20px;
 }
 
-.user-confirmation-btn-container>button{
+.user-confirmation-btn-container>button {
     padding: 10px 15px 10px 15px;
     margin: 0px 10px 0px 10px;
     border: none;
@@ -324,41 +326,41 @@
     color: pink;
 }
 
-.user-confirmation-btn-container>button:first-child:hover{
+.user-confirmation-btn-container>button:first-child:hover {
     cursor: pointer;
     background-color: red;
 }
 
-.user-confirmation-btn-container>button:last-child:hover{
+.user-confirmation-btn-container>button:last-child:hover {
     cursor: pointer;
     color: red;
     background-color: greenyellow;
 }
 
-.confirmation-msg-container{
+.confirmation-msg-container {
     text-align: center;
     font-style: italic;
     color: pink;
 }
 
-.confirmation-msg-container>h2{
+.confirmation-msg-container>h2 {
     padding-top: 50px;
 }
 
-.confirmation-msg-container>img{
+.confirmation-msg-container>img {
     width: 100px;
 
 }
 
-.open-when-container{
+.open-when-container {
     width: 320px;
     height: 85vh;
     margin: auto;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: italic;
-    background-image: linear-gradient(rgba(255,255,255,0.4)),
-    url("/images/open-when.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4)),
+        url("/images/open-when.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -366,27 +368,27 @@
     overflow: scroll;
 }
 
-.open-when-sidebar{
+.open-when-sidebar {
     line-height: 2;
 }
 
-.open-when-sidebar>h4{
+.open-when-sidebar>h4 {
     height: 30px;
     transition: 0.3s ease;
 }
 
 
-.open-when-sidebar>h4:hover{
+.open-when-sidebar>h4:hover {
     cursor: pointer;
     font-size: large;
 }
 
-.sidebar:has( .open-when-sidebar>h4),
-.sidebar.expanded{
+.sidebar:has(.open-when-sidebar>h4),
+.sidebar.expanded {
     width: auto;
 }
 
-.my-collection-verifier-container{
+.my-collection-verifier-container {
     position: absolute;
     width: 300px;
     align-content: center;
@@ -397,22 +399,22 @@
     text-align: center;
     z-index: 999;
     border-radius: 10px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.my-collection-content{
+.my-collection-content {
     width: 200px;
     height: 150px;
     margin: auto;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 1);
 }
 
-.passkey-cancel-btn-container{
+.passkey-cancel-btn-container {
     text-align: right;
     margin-bottom: 10px;
 }
 
-.passkey-cancel-btn-container>button{
+.passkey-cancel-btn-container>button {
     height: 25px;
     border: none;
     outline: none;
@@ -421,12 +423,12 @@
     background-color: transparent;
 }
 
-.passkey-cancel-btn-container>button:hover{
+.passkey-cancel-btn-container>button:hover {
     cursor: pointer;
     font-size: medium;
 }
 
-.my-collection-content>input{
+.my-collection-content>input {
     height: 30px;
     border-radius: 5px;
     border: none;
@@ -437,7 +439,7 @@
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
-.my-collection-content>button{
+.my-collection-content>button {
     border-radius: 5px;
     border: none;
     outline: none;
@@ -447,27 +449,80 @@
     box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
 }
 
-.my-collection-content>button:hover{
+.my-collection-content>button:hover {
     cursor: pointer;
     font-size: medium;
     padding: 5px 10px 5px 10px;
 }
 
-.open-when-overlay{
+.open-when-overlay {
     position: absolute;
     width: 100%;
     height: 150px;
     margin: auto;
     border-bottom: 3px solid lightseagreen;
-    background-image: linear-gradient(rgba(255,255,255,0.4)),
-    url("/images/open-when.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4)),
+        url("/images/open-when.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-iframe{
+iframe {
     height: 450px;
     margin-bottom: 130px;
     margin-top: 20px;
     border: 3px solid lightseagreen;
+}
+
+.toggle-btn-container {
+    display: flex;
+    font-size: medium;
+    margin-left: 5px;
+}
+
+.retro-btn-left {
+    width: 35px;
+    text-align: left;
+    border-radius: 10px;
+    opacity: 70%;
+    background-color: lightgray;
+}
+
+.retro-btn-left>button {
+    width: 15px;
+    height: 18px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 2px;
+    border: none;
+    outline: none;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    background-color: darkslategray;
+}
+
+.toggle-btn-container>p:nth-child(2)>button:hover {
+    cursor: pointer;
+
+}
+
+.retro-btn-right {
+    width: 35px;
+    border-radius: 10px;
+    opacity: 70%;
+    background-color: lightgray;
+}
+
+.retro-btn-right>button {
+    width: 15px;
+    height: 18px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-right: 2px;
+    border: none;
+    outline: none;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    background-color: darkslategray;
+    transform: translateX(7px);
 }

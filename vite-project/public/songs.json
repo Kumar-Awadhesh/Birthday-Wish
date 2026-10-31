@@ -70,6 +70,10 @@
             {
                 "id": 10,
                 "song": "https://www.youtube.com/embed/2zeqv3Zg36A?si=r9rsEKJaTpF4pprW"
+            },
+            {
+                "id": 11,
+                "song": "https://audio.com/gaurav-kasania/audio/099-keh-doon-tumhein-remix"
             }
         ],
         "mycollection": [
@@ -218,7 +222,24 @@
             {
                 "id": 4,
                 "song": "https://www.youtube.com/embed/rrVrwa1xHdI?si=B5pSqE2xgEVryogv"
+            },
+            {
+                "id": 5,
+                "song": "https://audio.com/jayprakashsongsold95/audio/04-kanchi-re-kanchi-re-hare-rama-hare-krishna"
+            },
+            {
+                "id":6,
+                "song": "https://audio.com/venkat-rao-1873038391276144/audio/phoolon-ke-rang-se-prem-pujari-320-kbps"
+            },
+            {
+                "id": 7,
+                "song": "https://audio.com/gaurav-kasania/audio/05-janam-janam-ka-saath-hai-mohd-rafi-wwwdownloadmingcom"
+            },
+            {
+                "id": 8,
+                "song": "https://www.youtube.com/embed/7tVozVTJUqs?si=OWfloHQxQfpgTK5N&amp;start=10"
             }
+
         ]
     }
 }
