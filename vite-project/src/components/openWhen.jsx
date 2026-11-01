@@ -31,13 +31,15 @@ const OpenWhen = () => {
     return (
         <>
             <main className="open-when-container smooth-navigation">
-                <div className="toggle-btn-container">
-                    <p>English</p>
-                    <p className={retro ? "retro-btn-right" : "retro-btn-left"}><button onClick={() => {
-                        retro ? setRetro(false) : setRetro(true)
-                    }}></button></p>
-                    <p>Hindi-Retro</p>
-                </div>
+                {    myCollection &&
+                    <div className="toggle-btn-container">
+                        <p>English</p>
+                        <p className={retro ? "retro-btn-right" : "retro-btn-left"}><button onClick={() => {
+                            retro ? setRetro(false) : setRetro(true)
+                        }}></button></p>
+                        <p>Hindi-Retro</p>
+                    </div>
+                }   
                 {
                     retro ?
                         <div>
