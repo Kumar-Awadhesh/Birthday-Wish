@@ -9,7 +9,7 @@ const WaitingHall = () => {
     const [minute, setMinute] = useState(0);
     const [second, setSecond] = useState(0);
 
-    const targetDate = new Date("2026-10-06T00:00:00").getTime();
+    const targetDate = new Date("2026-11-06T00:00:00").getTime();
     const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
     const {user, setUser, birthTime, setBirthTime} = useContext(BirthdayContext);
@@ -61,7 +61,7 @@ const WaitingHall = () => {
         <>
             <main className="container smooth-navigation">
                 <div className="waiting-container">
-                    <h2 className="waiting-msg"> Hey Beautiful! <br />We're Waiting for the Sacred day,<br />
+                    <h2 className="waiting-msg"> Hey Beautiful! <br />We're Waiting for the Precious day,<br />
                         The Day You Came into This World!
                     </h2>
                     <h2 className="time-stamp">

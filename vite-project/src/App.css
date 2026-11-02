@@ -4,7 +4,7 @@
 
 .container {
     width: 320px;
-    height: 100dvh;
+    height: 90dvh;
     margin: auto;
     background: url("/images/dashboard_theme.png");
     background-position: top;
@@ -60,7 +60,7 @@
 }
 
 .sidebar {
-    height: 100dvh;
+    height: 90dvh;
     width: 45%;
     position: absolute;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -118,7 +118,7 @@
 .waiting-container {
 
     width: 320px;
-    height: 85vh;
+    height: 90dvh;
     margin: auto;
     align-content: center;
 
@@ -146,12 +146,12 @@
 
 .birth-cake-container {
     width: 320px;
-    height: 85vh;
+    height: 85dvh;
     margin: auto;
 }
 
 .cake-img-container-before {
-    height: 100dvh;
+    height: 85dvh;
     align-content: end;
     text-align: center;
     background: url("/images/dashboard_theme.png");
@@ -200,7 +200,7 @@
 
 
 .celebration-container-after {
-    height: 100dvh;
+    height: 85dvh;
     align-content: center;
     background-position: center;
     background-repeat: no-repeat;
