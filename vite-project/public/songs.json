@@ -79,11 +79,11 @@
         "mycollection": [
             {
                 "id": 1,
-                "song": "https://audio.com/jan-patrick-galiste/audio/enrique-eglesias-hero"
+                "song": "https://www.youtube.com/embed/ZJgcK80AXEE?si=LnPC8uu7-kbfGuXD"
             },
             {
                 "id": 2,
-                "song": "https://audio.com/ellendyrosas/audio/enrique-iglesias-escape"
+                "song": "https://audio.com/jan-patrick-galiste/audio/enrique-eglesias-hero"
             },
             {
                 "id": 3,
@@ -204,6 +204,14 @@
             {
                 "id": 32,
                 "song": "https://audio.com/gaurav-kasania/audio/enrique-iglesias-wish-i-was-your-lover"
+            },
+            {
+                "id": 33,
+                "song": "https://audio.com/hola416040/audio/home-charlie-puth-feat-utada-hikaru-us-uk"
+            },
+            {
+                "id": 34,
+                "song": "https://audio.com/ellendyrosas/audio/enrique-iglesias-escape"
             }
         ],
         "hindiRetro": [
