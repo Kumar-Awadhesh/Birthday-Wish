@@ -61,12 +61,11 @@
 .sidebar {
     height: 90dvh;
     width: 45%;
-    /* position: absolute; */
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 5px;
     color: pink;
     background-color: rgb(0, 0, 0, 0.8);
-    /* z-index: 1; */
+
 }
 
 
@@ -353,7 +352,7 @@
 }
 
 .open-when-container {
-    width: 320px;
+    width: 340px;
     height: 85vh;
     margin: auto;
     text-align: center;
