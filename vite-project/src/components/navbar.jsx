@@ -12,10 +12,10 @@ const Navbar = () => {
 
     
     useEffect(()=> {
-        if(User.toLocaleLowerCase() === "priya" && birthTime > 0){
+        if(User?.toLocaleLowerCase() === "priya" && birthTime > 0){
             navigate("/waiting_hall")
         }
-        else if(User.toLocaleLowerCase() === "elaichi" && birthTime > 0){
+        else if(User?.toLocaleLowerCase() === "elaichi" && birthTime > 0){
             navigate("/waiting")
         }
     },[birthTime, navigate])
