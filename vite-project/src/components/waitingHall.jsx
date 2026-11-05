@@ -37,6 +37,7 @@ const WaitingHall = () => {
     useEffect(() => {
         const totalSecond = Math.floor(timeLeft / 1000);
         setBirthTime(timeLeft);
+        localStorage.setItem("priyaTime", timeLeft)
         
         setDay(Math.floor(totalSecond / (60 * 60 * 24)));
         setHour(Math.floor(totalSecond % (60 * 60 * 24) / (60 * 60)));

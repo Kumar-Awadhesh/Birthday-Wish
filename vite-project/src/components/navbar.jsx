@@ -11,13 +11,16 @@ const Navbar = () => {
     const User = localStorage.getItem("User");
 
     
+    const birth_time = localStorage.getItem("priyaTime")
+    const birth_Time = localStorage.getItem("elaichiTime")
     useEffect(()=> {
-        if(User?.toLocaleLowerCase() === "priya" && birthTime > 0){
+        if(User?.toLocaleLowerCase() === "priya" && birth_time > 0){
             navigate("/waiting_hall")
         }
-        else if(User?.toLocaleLowerCase() === "elaichi" && birthTime > 0){
+        else if(User?.toLocaleLowerCase() === "elaichi" && birth_Time > 0){
             navigate("/waiting")
         }
+        
     },[birthTime, navigate])
 
 
