@@ -38,6 +38,7 @@ const OpenWhen = () => {
                             retro ? setRetro(false) : setRetro(true)
                         }}></button></p>
                         <p>Hindi-Retro</p>
+                        <input className="search-box" type="text" placeholder="Search song..." />
                     </div>
                 }   
                 {
