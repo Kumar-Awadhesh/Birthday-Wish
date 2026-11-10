@@ -6,6 +6,7 @@ import axios from "axios";
 const OpenWhen = () => {
     const [songs, setSongs] = useState([]);
     const [retro, setRetro] = useState(false);
+    const [searchSongs, setSearchSongs] = useState("");
 
     const {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
@@ -27,6 +28,10 @@ const OpenWhen = () => {
         getSongs()
     }, [])
 
+    const searchSong = (song) => {
+        setSearchSongs(song);
+    }
+
 
     return (
         <>
@@ -38,7 +43,7 @@ const OpenWhen = () => {
                             retro ? setRetro(false) : setRetro(true)
                         }}></button></p>
                         <p>Hindi-Retro</p>
-                        <input className="search-box" type="text" placeholder="Search song..." />
+                        <input className="search-box" type="text" placeholder="Search song..." onChange={(e)=> searchSong(e.target.value)} />
                     </div>
                 }   
                 {

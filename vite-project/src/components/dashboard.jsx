@@ -87,6 +87,7 @@ const Dashboard = () => {
             setLonely(false);
             setMoodDown(false);
             setInspiration(false);
+            setManyMood(false);
             setMyCollection(true);
             navigate("/open_when")
         }
@@ -113,6 +114,7 @@ const Dashboard = () => {
                 setLonely(false);
                 setMoodDown(false);
                 setInspiration(false);
+                setManyMood(false);
                 setMyCollection(true);
                 navigate("/open_when");
             }
