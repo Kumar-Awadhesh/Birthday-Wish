@@ -7,6 +7,7 @@ const OpenWhen = () => {
     const [songs, setSongs] = useState([]);
     const [retro, setRetro] = useState(false);
     const [searchSongs, setSearchSongs] = useState("");
+    const [filteredSong, setFilteredSong] = useState([]);
 
     const {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
@@ -28,10 +29,24 @@ const OpenWhen = () => {
         getSongs()
     }, [])
 
-    const searchSong = (song) => {
-        setSearchSongs(song);
-    }
+    
+    useEffect(()=> {
 
+        const timer = setTimeout(()=> {
+            const searchData = songs.openWhen?.mycollection?.filter(newSong => newSong.song.includes(searchSongs))
+            if(searchData?.length > 0){
+                setFilteredSong(searchData)
+            }
+            else{
+                alert("No match found !")
+            }
+        },1000)
+        return () => {
+            clearTimeout(timer);
+        }
+    },[searchSongs])
+
+   
 
     return (
         <>
@@ -43,7 +58,7 @@ const OpenWhen = () => {
                             retro ? setRetro(false) : setRetro(true)
                         }}></button></p>
                         <p>Hindi-Retro</p>
-                        <input className="search-box" type="text" placeholder="Search song..." onChange={(e)=> searchSong(e.target.value)} />
+                        <input className="search-box" type="text" placeholder="Search song..." onChange={(e)=> setSearchSongs(e.target.value)} />
                     </div>
                 }   
                 {
@@ -98,7 +113,14 @@ const OpenWhen = () => {
                             }
                             {
                                 myCollection &&
+                                searchSongs === "" ?
                                 songs?.openWhen?.mycollection?.map((song, index) => (
+                                    <div key={song.id}>
+                                        <div className="open-when-overlay"></div>
+                                        <iframe src={song.song} frameBorder="0" scrolling="no"></iframe>
+                                    </div>
+                                )) :
+                                filteredSong?.map((song, index) => (
                                     <div key={song.id}>
                                         <div className="open-when-overlay"></div>
                                         <iframe src={song.song} frameBorder="0" scrolling="no"></iframe>
