@@ -11,8 +11,10 @@ const OpenWhen = () => {
 
     const {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
-        myCollection, setMyCollection, manyMood, setManyMood
+        myCollection, setMyCollection, manyMood, setManyMood, passkey, setPasskey
     } = useContext(BirthdayContext);
+
+    const user = localStorage.getItem("User")
 
 
     useEffect(() => {
@@ -24,7 +26,10 @@ const OpenWhen = () => {
             catch (error) {
                 console.log(error)
             }
-
+            if (passkey !== null){
+                setMyCollection(true);
+            }
+           
         }
         getSongs()
     }, [])
@@ -34,12 +39,10 @@ const OpenWhen = () => {
 
         const timer = setTimeout(()=> {
             const searchData = songs.openWhen?.mycollection?.filter(newSong => newSong.song.includes(searchSongs))
-            if(searchData?.length > 0){
-                setFilteredSong(searchData)
+            if(searchSongs !== "" && searchData.length === 0){
+                return alert("No match found !")
             }
-            else{
-                alert("No match found !")
-            }
+            setFilteredSong(searchData)
         },1000)
         return () => {
             clearTimeout(timer);
