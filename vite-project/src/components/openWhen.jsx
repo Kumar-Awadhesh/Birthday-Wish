@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { BirthdayContext } from "../authorization/birthdayContext";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const OpenWhen = () => {
@@ -13,8 +14,11 @@ const OpenWhen = () => {
         moodDown, setMoodDown, lonely, setLonely, inspiration, setInspiration,
         myCollection, setMyCollection, manyMood, setManyMood, passkey, setPasskey
     } = useContext(BirthdayContext);
+    
+    const navigate = useNavigate();
 
     const user = localStorage.getItem("User")
+    const passKey = localStorage.getItem("passKey")
 
 
     useEffect(() => {
@@ -26,10 +30,11 @@ const OpenWhen = () => {
             catch (error) {
                 console.log(error)
             }
-            if (passkey !== null){
+            if (passKey !== null && moodDown === false && lonely === false && 
+                inspiration === false && manyMood === false){
                 setMyCollection(true);
             }
-           
+            
         }
         getSongs()
     }, [])
